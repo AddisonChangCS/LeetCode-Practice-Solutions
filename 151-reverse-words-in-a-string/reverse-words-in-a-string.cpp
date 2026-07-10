@@ -23,7 +23,9 @@ public:
             }
         }
         s.resize(slow_ptr);
+
         reverse(s.begin(),s.end());
+        
         //head|tail: head|tail of the word
         for (int head = 0, tail = 0; tail <= s.size(); tail++)
         {
