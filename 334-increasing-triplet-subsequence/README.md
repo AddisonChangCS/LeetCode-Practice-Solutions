@@ -1,3 +1,12 @@
+### Solution: 
+use greedy approach to reach **Time: $O(N)$, Space: $O(1)$**.  
+track two variable 
+* `first_min`: the minimum number in all seen nums
+* `second_min`: the middle number which gerantee a smaller number is at left
+
+By **Loop Invariant** `second_min` guarantee that before every loop start, there is always a smaller number left to this number.  
+Thus, if **`cur_num` > `second_min`**, statement valid.
+
 <h2><a href="https://leetcode.com/problems/increasing-triplet-subsequence">Increasing Triplet Subsequence</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>Given an integer array <code>nums</code>, return <code>true</code><em> if there exists a triple of indices </em><code>(i, j, k)</code><em> such that </em><code>i &lt; j &lt; k</code><em> and </em><code>nums[i] &lt; nums[j] &lt; nums[k]</code>. If no such indices exists, return <code>false</code>.</p>
 
 <p>&nbsp;</p>
