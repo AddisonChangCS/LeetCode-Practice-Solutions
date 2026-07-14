@@ -16,9 +16,10 @@ private:
         for (int i = 0; i < nums.size(); i++)
         {
             int complement=k-nums[i];
-            if (count.find(complement)!=count.end() && count[complement]>0)
+            auto it = count.find(complement);
+            if (it!=count.end() && it->second)
             {
-                count[complement]--;
+                it->second--;
                 operation_count++;
             }
             else
