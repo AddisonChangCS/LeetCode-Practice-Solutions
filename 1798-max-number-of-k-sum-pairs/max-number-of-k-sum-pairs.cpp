@@ -5,7 +5,7 @@ using namespace std;
 class Solution {
 public:
     int maxOperations(vector<int>& nums, int k) {
-        return solution2(nums, k);
+        return solution1(nums, k);
     }
 private:
 
