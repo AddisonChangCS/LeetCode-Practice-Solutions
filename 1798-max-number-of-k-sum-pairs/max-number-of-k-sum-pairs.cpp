@@ -11,8 +11,12 @@ private:
     //Time: O(N)
     //Space: O(N)
     int solution1(vector<int>& nums, int k){
+        
         unordered_map<int,int> count;
+        count.reserve(nums.size());
+
         int operation_count=0;
+
         for (int i = 0; i < nums.size(); i++)
         {
             int complement=k-nums[i];
