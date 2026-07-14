@@ -1,3 +1,7 @@
+### Use Two different approch
+* Solution 1: using **Hash Tabel** approch, result in Time: $O(N)$, Space: $O(N)$
+* Solution 2: using **Two Pointer with Sorting** approch, result in Time: $O(NlogN)$, Space: $O(1)$ 
+
 <h2><a href="https://leetcode.com/problems/max-number-of-k-sum-pairs">Max Number of K-Sum Pairs</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>You are given an integer array <code>nums</code> and an integer <code>k</code>.</p>
 
 <p>In one operation, you can pick two numbers from the array whose sum equals <code>k</code> and remove them from the array.</p>
