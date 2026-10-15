@@ -1,5 +1,10 @@
 #include <queue>
 using namespace std;
+static const auto fast_io = []() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    return 0;
+}();
 //Overall Time: O(N)
 //Overall Space: O(1)
 class RecentCounter {
