@@ -1,25 +1,18 @@
-#include <queue>
+#include <vector>
 using namespace std;
-static const auto fast_io = []() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    return 0;
-}();
-//Overall Time: O(N)
-//Overall Space: O(1)
+//Overall Time: O(N) (with sliding window optimize)
+//Overall Space: O(N)
 class RecentCounter {
 public:
     RecentCounter() {};
     //Time: Amortized O(1) per ping
-    //Space: O(1)(<3000)
+    //Space: O(N)
     int ping(int t) {
-        while (time_seg.front()<t-3000 && !time_seg.empty())
-        {
-            time_seg.pop();
-        }
-        time_seg.push(t);
-        return time_seg.size();
+        time_seg.push_back(t);
+        while (time_seg[left_ptr]<t-3000) left_ptr++;
+        return time_seg.size()-left_ptr;
     }
 private:
-    queue<int> time_seg;
+    vector<int> time_seg;
+    int left_ptr=0;
 };
