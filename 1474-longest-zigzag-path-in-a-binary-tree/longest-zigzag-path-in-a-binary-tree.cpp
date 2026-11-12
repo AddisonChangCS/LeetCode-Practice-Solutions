@@ -14,11 +14,12 @@
 #define RESET 2 
 class Solution {
 public:
+    //Time: O(N)
+    //Space: O(height)
     int longestZigZag(TreeNode* root) {
         if(!root) return 0;
         return ZigZag_DFS(root, RESET, 0);
     }
-    //direction: true for right, 
     int ZigZag_DFS(TreeNode* root, int prev_direction, int length){
         if(!root) return length-1;
         int right, left;
