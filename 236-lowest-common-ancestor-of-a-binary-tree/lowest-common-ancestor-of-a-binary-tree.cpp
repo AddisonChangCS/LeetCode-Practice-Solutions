@@ -9,6 +9,8 @@
  */
 class Solution {
 public:
+    //Time: O(N)
+    //Space: O(H)
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
         bool p_mark=false, q_mark=false;
         TreeNode* lca=nullptr;
