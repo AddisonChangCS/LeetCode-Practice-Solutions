@@ -12,7 +12,7 @@
 class Solution {
 public:
     //Time: O(N)
-    //Space: O(N)
+    //Space: O(W)
     int maxLevelSum(TreeNode* root) {
         queue<TreeNode*> nodes;
         //max_sum, level
