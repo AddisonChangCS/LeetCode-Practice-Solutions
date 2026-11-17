@@ -6,8 +6,8 @@ private:
 public:
     // row, colunm
     vector<vector<bool>> visited;
-    //Time: O(N)
-    //Space: O(N)
+    //Time: O(mn)
+    //Space: O(mn)
     int nearestExit(vector<vector<char>>& maze, vector<int>& entrance) {
         queue<pair<int, int>> q;
         visited = vector<vector<bool>>(maze.size(),vector<bool>(maze[0].size(), false));
