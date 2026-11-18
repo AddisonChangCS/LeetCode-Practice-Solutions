@@ -6,14 +6,16 @@ class SmallestInfiniteSet {
  * obj->addBack(num);
  */
 private:
+    //Space: O(K)
     priority_queue<int, vector<int>, greater<int>> add_back;
     unordered_set<int> add_back_set;
     int pointer;
 public:
+    //Time: O(1)
     SmallestInfiniteSet() {
         pointer=1;
     }
-    
+    //Time: O(logK)
     int popSmallest() {
         if(add_back.empty() || pointer < add_back.top()){
             return pointer++;
@@ -25,7 +27,7 @@ public:
             return val;
         }
     }
-    
+    //Time: O(logK)
     void addBack(int num) {
         if(!add_back_set.contains(num) && num<pointer){
             add_back_set.insert(num);
