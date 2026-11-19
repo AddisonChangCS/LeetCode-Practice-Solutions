@@ -9,6 +9,8 @@
 
 class Solution {
 public:
+    //Time: O(logN)
+    //Space: O(1)
     int guessNumber(int n) {
         int left=1, right=n;
         while(left<=right){
